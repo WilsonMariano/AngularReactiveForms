@@ -1,4 +1,4 @@
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -32,11 +32,11 @@ export class AppComponent implements OnInit {
     // **************************** //
 
     this.forma = this.fb.group({
-      'nombre': ['', Validators.required],
+      'nombre': ['', [Validators.required, this.spacesValidator]],
       'apellido': ['', Validators.required],
-      'dni': ['', Validators.required],
+      'edad': ['', [Validators.required, Validators.min(18), Validators.max(99)]],
       'sexo': ['', Validators.required],
-      'email': ['', ],
+      'email': ['', [Validators.required, Validators.email]],
       'terminos': ['', Validators.required]
     });
 
@@ -44,6 +44,16 @@ export class AppComponent implements OnInit {
 
   public aceptar(): void {
     console.log(this.forma);
+  }
+
+  // CUSTOM VALIDATOR
+  private spacesValidator(control: AbstractControl): null | object {
+    const nombre = <string>control.value;
+    const spaces = nombre.includes(' ');
+
+    return spaces
+      ? { containsSpaces: true }
+      : null; 
   }
 
 }
