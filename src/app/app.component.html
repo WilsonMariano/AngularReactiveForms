@@ -1,20 +1,49 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <h2>Angular Forms</h2>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre">
+        <small>El nombre es requerido</small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" placeholder="Ingrese apellido">
+        <small>El apellido es requerido</small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="dni" class="form-label">DNI</label>
+        <input type="number" class="form-control" id="dni" placeholder="Ingrese DNI">
+        <small>El DNI es requerido</small>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="sexo" class="form-label">Sexo</label>
+        <select class="form-select" id="sexo">
+          <option value="">Seleccione uno</option>
+          <option value="F">Femenino</option>
+          <option value="M">Masculino</option>
+        </select>
+        <small>El sexo es requerido</small>
+      </div>
+      <div class="col-md-12 mb-5">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Ingrese email">
+        <small>El email es requerido</small>
+      </div>
+      <div class="col-md-12 mb-5">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="terminos">
+          <label for="recordar" class="form-check-label" for="terminos">
+            Aceptar términos y condiciones
+          </label>
+        </div>
+      </div>
+      <div class="col-md-12 d-grid gap-2">
+        <button class="btn btn-primary btn-block">Aceptar</button>
+      </div>
+    </div>
+  </form>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
