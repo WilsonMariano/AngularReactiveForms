@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   }
 
   public aceptar(): void {
-    console.log(this.forma);
+    console.log(this.forma.getRawValue());
   }
 
   // CUSTOM VALIDATOR
